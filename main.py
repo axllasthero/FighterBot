@@ -1,4 +1,7 @@
-import conf
+try: 
+    import conf
+except ImportError:
+    pass
 import discord
 from discord.ext import commands
 import img_handler as imhl
@@ -161,4 +164,4 @@ async def vc_ost(ctx):
         await ctx.channel.send(msg)
         await voice_client.play(    discord.FFmpegPCMAudio( executable="./FFmpeg/ffmpeg.exe", source="./sound/mk.mp3")    )
 
-bot.run(conf.bot_token)
+bot.run(os.environ["BOT_TOKEN"])

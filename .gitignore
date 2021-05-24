@@ -4,4 +4,4 @@ __pycache__
 FFmpeg
 img/*
 
-!img/vs_animated
+!img/vs_bg_animated
